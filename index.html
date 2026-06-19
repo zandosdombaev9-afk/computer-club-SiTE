@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERVERSE | Премиум Кибер-Арена</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">CYBER<span>VERSE</span></div>
+        <nav class="nav">
+            <a href="#main">Главная</a>
+            <a href="#features">Железо</a>
+            <a href="#zones">Зоны</a>
+            <a href="#rates">Тарифы</a>
+        </nav>
+        <button class="btn-neon" onclick="openModal('loginModal')">Войти</button>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Astana Gaming Esports</div>
+                <h1>Твой билет в <br><span>cyber-реальность</span></h1>
+                <p>Погрузись в игровой процесс на максимальной скорости. Самый низкий пинг в Казахстане, мощные ПК на базе RTX 4090 и премиальные кресла для твоего абсолютного триумфа.</p>
+                <button class="btn-neon fill" onclick="openModal('orderModal')">Забронировать ПК</button>
+            </div>
+            <div class="cyber-circle"></div>
+        </section>
+    </main>
+
+    <section id="features">
+        <h2 class="section-title">Техническое <span>Превосходство</span></h2>
+        <p class="section-subtitle">Оборудование, на котором тренируются профессиональные киберспортсмены</p>
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <h3>Топовый FPS</h3>
+                <p>Процессоры Intel i9 последнего поколения и видеокарты RTX 4090 выдают стабильные 360+ кадров в секунду.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🎯</span>
+                <h3>Кибер-Периферия</h3>
+                <p>Мыши Logitech G Pro X Superlight, механические клавиатуры Razer и наушники HyperX Cloud II.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🌀</span>
+                <h3>Ультра-пинг</h3>
+                <p>Выделенная оптоволоконная линия со скоростью до 1 Гбит/с гарантирует мгновенный отклик в матчах.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="zones">
+        <h2 class="section-title">Наши Игровые <span>Пространства</span></h2>
+        <p class="section-subtitle">Выбирай атмосферу под свой стиль игры</p>
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🎮</span>
+                <h3>Common Hall</h3>
+                <p>Просторный общий игровой зал с мощной вентиляцией, ярким неоновым дизайном и отличной компанией единомышленников.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">👑</span>
+                <h3>VIP Кабины</h3>
+                <p>Изолированные шумоизолированные комнаты на 1 или 5 человек для командных тренировок без лишних глаз.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🛋️</span>
+                <h3>Console Lounge</h3>
+                <p>Уютная лаунж-зона с консолями PS5, огромными 4K OLED телевизорами, кальянами и мягкими пуфами.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rates">
+        <h2 class="section-title">Выбери свой <span>Уровень</span></h2>
+        <p class="section-subtitle">Интерактивные тарифные планы с поминутной тарификацией</p>
+        <div class="price-container">
+            <div class="price-card">
+                <h3>Standard Zone</h3>
+                <div class="price">800 ₸ <span>/ час</span></div>
+                <ul>
+                    <li>• GeForce RTX 3060 Ti</li>
+                    <li>• Мониторы ASUS 144Hz</li>
+                    <li>• Игровые кресла DXRAcer</li>
+                    <li>• Общий игровой зал</li>
+                </ul>
+                <button class="btn-neon" style="width: 100%;" onclick="openModal('orderModal')">Выбрать тариф</button>
+            </div>
+
+            <div class="price-card VIP">
+                <div class="top-badge">ULTIMATE PRO</div>
+                <h3>VIP Cyber Room</h3>
+                <div class="price">1800 ₸ <span>/ час</span></div>
+                <ul>
+                    <li>• Ультимативная GeForce RTX 4090</li>
+                    <li>• Мониторы ROG 360Hz</li>
+                    <li>• Кресла Noblechairs Leather</li>
+                    <li>• Приватная звукоизоляция</li>
+                </ul>
+                <button class="btn-neon fill" style="width: 100%;" onclick="openModal('orderModal')">Выбрать тариф</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 CYBERVERSE Arena. Все протоколы защищены.</p>
+        <p class="author">Разработчик дизайна и кода: Домбаев Жандос</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+            <h2>Вход в <span>CyberVerse</span></h2>
+            <p class="modal-p">Введите ваш персональный Кибер-ID для подключения</p>
+            <form onsubmit="event.preventDefault(); alert('Вход выполнен! Синхронизация профиля успешна.'); closeModal('loginModal');">
+                <div class="input-group">
+                    <label>Игровой ID / Email</label>
+                    <input type="text" placeholder="Например: Jandos_Pro" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль доступа</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-neon fill" style="width: 100%;">Активировать аккаунт</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('orderModal')">&times;</button>
+            <h2>Занять <span>Место</span></h2>
+            <p class="modal-p">Заполните экспресс-заявку на бронирование игрового ПК</p>
+            <form onsubmit="event.preventDefault(); alert('Бронь принята! Ждем вас в клубе. Протокол запущен.'); closeModal('orderModal');">
+                <div class="input-group">
+                    <label>Ваше Имя</label>
+                    <input type="text" placeholder="Введите имя" required>
+                </div>
+                <div class="input-group">
+                    <label>Номер телефона</label>
+                    <input type="tel" placeholder="+7 (707) 000-00-00" required>
+                </div>
+                <div class="input-group">
+                    <label>Выберите игровую зону</label>
+                    <select required>
+                        <option value="standard">Standard Hall (800 ₸/час)</option>
+                        <option value="vip">VIP Cyber Room (1800 ₸/час)</option>
+                        <option value="console">Console Lounge Zone</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-neon fill" style="width: 100%;">Подтвердить бронирование</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('remove'); 
+            document.getElementById(id).classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
